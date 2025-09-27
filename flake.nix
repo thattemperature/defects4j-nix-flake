@@ -27,6 +27,10 @@
         ];
       perl-env = pkgs.perl.withPackages perl-pkgs;
       java = pkgs.jdk11;
+      basics = with pkgs; [
+        curl
+        unzip
+      ];
 
     in
 
@@ -37,7 +41,8 @@
         buildInputs = [
           perl-env
           java
-        ];
+        ]
+        ++ basics;
 
       };
     };
