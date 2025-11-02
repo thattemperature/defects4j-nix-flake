@@ -30,6 +30,7 @@
         perl-env = pkgs.perl.withPackages perl-pkgs;
         java = pkgs.jdk11;
         basics = with pkgs; [
+          subversion
           curl
           unzip
         ];
